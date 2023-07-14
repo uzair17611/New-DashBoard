@@ -1,0 +1,25 @@
+.Footer{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap:30px;
+
+
+
+
+    span{
+   
+        &:first-child{
+          font-weight:bold;
+        }
+
+
+        
+        &:last-child{
+            font-style:14px;
+        }
+
+
+
+    }
+}
