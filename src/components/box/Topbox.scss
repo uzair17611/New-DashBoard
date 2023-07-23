@@ -1,0 +1,47 @@
+.Top{
+
+    h1{
+        margin-bottom: 10px;
+    }
+
+    .list{
+ 
+
+
+     .listItem{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+        .user{
+                            display: flex;
+                            gap:20px;
+
+            .userText{
+         display: flex;
+         flex-direction: column;
+         gap:5px;
+
+         .username{
+            font-weight: 500;
+            font-size: 14px;
+         }
+         .userEmail{
+            font-weight: 500;
+            font-size: 12px;
+         }
+            }
+                    img{
+                    width: 40px;;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    }
+                        
+           .amount{
+            font-weight: 500;
+           }
+        }
+     }
+    }
+}
