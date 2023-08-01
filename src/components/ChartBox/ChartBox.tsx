@@ -2,7 +2,8 @@ import React from 'react'
 import './ChartBox.scss'
 import { Link } from 'react-router-dom'
 import  { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LabelList } from 'recharts';
+import { FALSE } from 'sass';
 
 const data = [
     {
@@ -68,8 +69,10 @@ const ChartBox = () => {
       <div className="chartinfo">
         <div className="chart">
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart width={300} height={100} data={data}>
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />
+        
+        <LineChart width={300} height={100} data={data} >
+        <Tooltip  contentStyle={{background:"transparent" ,border:"none" } }labelStyle={{display:"none"}} />
+          <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} dot={false}/>
         </LineChart>
       </ResponsiveContainer>
       </div>
