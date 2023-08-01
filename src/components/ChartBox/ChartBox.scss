@@ -1,0 +1,42 @@
+.Chartbox{
+    display: flex;
+    height: 100%;
+
+
+    .boxinfo{
+
+        display: flex;
+        flex:3;
+        // background-color: aqua;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title{
+
+            display: flex;
+            
+            gap:20px;
+        }
+       
+    }
+
+
+    .chartinfo{
+        display: flex;
+        flex:2;
+        flex-direction: column;
+        justify-content: space-between;
+      
+          .chart{
+                height: 100%;
+          }
+
+    }
+    .texts{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        gap:5px;
+
+   }
+}
