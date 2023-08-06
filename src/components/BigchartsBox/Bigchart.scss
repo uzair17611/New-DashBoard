@@ -1,0 +1,13 @@
+.Bigchart{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    // background-color:aquamarine;
+
+    .chart{
+        width: 100%;
+        height: 300px;
+    }
+}
