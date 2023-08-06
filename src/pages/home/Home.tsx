@@ -6,6 +6,8 @@ import { chartBoxProduct } from '../../data'
 import { chartBoxConversion } from '../../data'
 import { chartBoxRevenue } from '../../data'
 import { chartBoxUser } from '../../data'
+import BarCharts from '../../components/Barcharts/BarCharts'
+import { barChartBoxRevenue } from '../../data'
 
 
 
@@ -20,8 +22,8 @@ const Home = () => {
        <div className="box box5"><ChartBox {...chartBoxRevenue}/></div>
        <div className="box box6"><ChartBox {...chartBoxUser}/></div>
        <div className="box box7"></div>
-       <div className="box box8"></div> 
-        <div className="box box9">box9</div>
+       <div className="box box8"><BarCharts {...barChartBoxRevenue}/></div> 
+        <div className="box box9"><BarCharts {...chartBoxConversion}/></div>
     </div>
   )
 }
