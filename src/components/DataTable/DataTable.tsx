@@ -1,10 +1,16 @@
 import './DataTable.scss'
 // import Box from '@mui/material/Box';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridValueGetterParams,GridToolbar } from '@mui/x-data-grid';
 
 const DataTable = () => {
     const columns: GridColDef[] = [
         { field: 'id', headerName: 'ID', width: 90 },
+        {field :"avatar " ,headerName:"Avatar" , width:100,
+        renderCell :(params)=>{
+            return <img src={params.row.img || "/noavatar.png"}></img>
+        }
+    },
+
         {
           field: 'firstName',
           headerName: 'First name',
@@ -60,7 +66,7 @@ const DataTable = () => {
             },
           },
         }}
-        slot={{toolbar:GridToolbar}}
+        slots={{toolbar:GridToolbar}}
         slotProps={
           {
             toolbar:{
@@ -72,6 +78,9 @@ const DataTable = () => {
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
+        disableColumnFilter
+        disableDensitySelector
+        disableColumnSelector
       />
     </div>
   )
