@@ -1,13 +1,12 @@
 import React from 'react'
-import './product.scss'
 import Single from '../../components/Single/Single'
 
-const Product = () => {
+const SingleUser = () => {
   return (
     <div>
-      <Single/>
+        <Single/>
     </div>
   )
 }
 
-export default Product
+export default SingleUser

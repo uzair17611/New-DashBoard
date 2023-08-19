@@ -12,6 +12,7 @@ import User from "./pages/User/User";
 import Menu from "./components/Menu/Menu";
 import Login from "./pages/Login/Login.tsx";
 import  "./styles/global.scss"
+import SingleUser from "./pages/SingleUser/SingleUser.tsx";
 
 
 
@@ -44,12 +45,20 @@ function App() {
           element: <Home />, // Render the Home component within the Outlet component
         },
         {
-          path: "/user",
+          path: "/users",
           element: <User />, // Render the User component within the Outlet component
         },
         {
           path: "/products",
           element: <Products />, // Render the Product component within the Outlet component
+        },
+        {
+          path: "/products/:id",
+          element: <Product/>, // Render the Product component within the Outlet component
+        },
+        {
+          path: "/users/:id",
+          element: <SingleUser />, // Render the Product component within the Outlet component
         },
       ],
      
