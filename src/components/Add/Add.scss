@@ -1,0 +1,70 @@
+@import "../../styles/variable.scss";
+
+
+
+
+.Add{
+    width: 100vw;
+    height: 100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.742);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    .model{
+
+        background-color: $main-bg;
+        padding: 50px;
+        position: relative;
+        border-radius: 10px;
+
+         h1{
+            margin-bottom: 40px;
+            font-size: 24px;
+            color:$soft-color;
+         }
+         .close{
+            position: absolute;
+            top:10px;
+            right:10px;
+
+         }
+         form{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 500px;
+            justify-content: space-between;
+           .item{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            margin-bottom: 20px;
+               label{
+                font-size: 14px;
+               }
+            input{
+                display: flex;
+                flex-direction: column;
+             
+                padding: 10px;
+                color:white;
+                background-color: transparent;
+                outline: none;
+                border-radius: 3px;
+                border :1px solid $soft-color
+            }
+        }
+            button{
+                width: 100%;
+                padding:10px;
+                cursor: pointer;
+              
+            }
+
+         }
+    }
+}
