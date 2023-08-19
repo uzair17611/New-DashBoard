@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+import "./Single.scss"
 
 
 const data = [
@@ -53,16 +53,19 @@ const Single = () => {
        <div className="view">
         <div className="info">
             <div className="topInfo">
-            <img src="" alt="" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHp18X5RHP5QyMmvKCMk1iQ5wiexmowc4v_cNQ_wZ9rzFJAKWHV9uFM8Mmr9s5E_flhCA&usqp=CAU" alt="" />
             <h1>john Doe</h1>
              <button>Update</button>
             </div>
             <div className="details">
                 <div className="item">
-                    <div className="itemTitel">UserName</div>
+                    <div className="itemTitle">UserName:</div>
                     <div className="itemValve">khan</div>
-                    <div className="itemTitel">UserName</div>
+                </div>
+                <div className="item">
+                    <div className="itemTitle">UserName:</div>
                     <div className="itemValve">khan</div>
+               
                 </div>
             </div>
         </div>
