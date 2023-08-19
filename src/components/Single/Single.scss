@@ -47,8 +47,41 @@
         }
 
     }
-    .activites{
+    .activities{
       flex:1;
+
+      ul{
+        li{
+            list-style-type: none;
+            position: relative;
+            width: 1px;
+            padding-top: 50mmpx;
+            background-color: #f45b65;
+
+            &::after{
+                 content:"";
+                 position:absolute;
+                 left:50%;
+                 bottom:0;
+                 width: 10px;
+                 height: 10px;
+                 border-radius: 50%;
+                 background-color:#f45b69;
+                 transform: translateX(-50%);
+            }
+            div{
+                min-width: 480px;
+                padding: 15px;
+                background-color: transparent;
+            }
+            p{
+                margin-top: 5px;
+            }
+            span{
+                font-size: 12px;
+            }
+        }
+      }
     }
 }
 

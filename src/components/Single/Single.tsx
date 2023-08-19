@@ -97,20 +97,30 @@ const Single = () => {
         <h2>Latest Activites</h2>
      <ul>
         <li>
+            <div>
             <p>John doe purchased a car with name robo</p>
             <span>3 days ago</span>
-            
+            </div>
         </li>
         <li>
+            <div>
             <p>John doe purchased a car with name robo</p>
             <span>3 days ago</span>
-            
+            </div>
         </li>
         <li>
+            <div>
             <p>John doe purchased a car with name robo</p>
             <span>3 days ago</span>
-            
+            </div>
         </li>
+        <li>
+            <div>
+            <p>John doe purchased a car with name robo</p>
+            <span>3 days ago</span>
+            </div>
+        </li>
+        
      </ul>
 
 
