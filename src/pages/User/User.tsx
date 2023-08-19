@@ -2,7 +2,7 @@ import "./user.scss"
 import DataTable from "../../components/DataTable/DataTable"
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import { userRows } from "../../data";
-
+import { useState } from "react";
 
 
 
@@ -61,7 +61,7 @@ renderCell :(params)=>{
 
 
 const User = () => {
-
+const [open ,setopen] =useState(false)
 
   
   
@@ -72,9 +72,10 @@ const User = () => {
       <button>
         Add New User
       </button>
-     <DataTable  columns={columns}  row={userRows}/>
+     
 
      </div>
+     <DataTable slug="user" rows={userRows } columns={columns}  />
     </div>
   )
 }

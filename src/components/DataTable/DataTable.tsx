@@ -1,52 +1,52 @@
-import './DataTable.scss'
-// import Box from '@mui/material/Box';
-import { DataGrid, GridColDef, GridValueGetterParams,GridToolbar } from '@mui/x-data-grid';
-import { userRows } from '../../data';
+// DataTable.js
+import React from "react";
+import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
+import { Link } from "react-router-dom";
+import "./DataTable.scss"; // Import your SCSS file
 
-type Props ={
-    columns:GridColDef,
-    row:object[]
-}
+const DataTable = (props) => {
+  const handleDelete = (id) => {
+    console.log("Object deleted with ID:", id);
+  };
 
+  const actionColumn: GridColDef = {
+    field: "action",
+    headerName: "Action",
+    width: 200,
+    renderCell: (params) => {
+      return (
+        <div className="action">
+          <Link to={`/${props.slug}/${params.row.id}`}>
+            <img src="/view.svg" alt="View" />
+          </Link>
+          <div className="delete" onClick={() => handleDelete(params.row.id)}>
+            <img src="/delete.svg" alt="Delete" />
+          </div>
+        </div>
+      );
+    },
+  };
 
-
-
-const DataTable = (props:Props) => {
-    
-    //   const rows = [
-    //     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 ,status:true },
-    //     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 ,status:true  },
-    //     { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-    //     { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    //     { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null ,status:true  },
-    //     { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-    //     { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 ,status:true },
-    //     { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-    //     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-    //   ];
-      
   return (
-    <div className='DataTable'>
-        <DataGrid
-        className='Datagrid'
-        rows={props.row}
-        columns={props.columns}
+    <div className="dataTable">
+      <DataGrid
+        className="dataGrid"
+        rows={props.rows}
+        columns={[...props.columns, actionColumn]}
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 7,
+              pageSize: 8,
             },
           },
         }}
-        slots={{toolbar:GridToolbar}}
-        slotProps={
-          {
-            toolbar:{
-                showQuickFilter:true,
-                quickFilterProps:{debounceMs:500}
-            }
-          }
-        }
+        components={{ Toolbar: GridToolbar }}
+        slotProps={{
+          toolbar: {
+            showQuickFilter: true,
+            quickFilterProps: { debounceMs: 500 },
+          },
+        }}
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
@@ -55,7 +55,7 @@ const DataTable = (props:Props) => {
         disableColumnSelector
       />
     </div>
-  )
-}
+  );
+};
 
-export default DataTable
+export default DataTable;
