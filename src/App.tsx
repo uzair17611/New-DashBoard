@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.tsx";
 import Footer from "./components/Footer/Footer.tsx";
-import Product from "./pages/product/Product";
+import Products from "./pages/products/Products.tsx";
+import Product from "./pages/Product/Product.tsx";
 import User from "./pages/User/User";
 import Menu from "./components/Menu/Menu";
 import Login from "./pages/Login/Login.tsx";
@@ -47,8 +48,8 @@ function App() {
           element: <User />, // Render the User component within the Outlet component
         },
         {
-          path: "/product",
-          element: <Product />, // Render the Product component within the Outlet component
+          path: "/products",
+          element: <Products />, // Render the Product component within the Outlet component
         },
       ],
      
