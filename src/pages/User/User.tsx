@@ -3,7 +3,7 @@ import DataTable from "../../components/DataTable/DataTable"
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import { userRows } from "../../data";
 import { useState } from "react";
-
+import Add from "../../components/Add/Add";
 
 
 
@@ -61,7 +61,7 @@ renderCell :(params)=>{
 
 
 const User = () => {
-const [open ,setopen] =useState(false)
+const [open ,setOpen] =useState(false)
 
   
   
@@ -69,13 +69,14 @@ const [open ,setopen] =useState(false)
     <div className='user'>
      <div className="info">
       <h1>User</h1>
-      <button>
+      <button  onClick={()=>setOpen(true)}>
         Add New User
       </button>
      
 
      </div>
      <DataTable slug="user" rows={userRows } columns={columns}  />
+     {open && <Add  slug="user"  columns={columns} setOpen={setOpen}/>}
     </div>
   )
 }
