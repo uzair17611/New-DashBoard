@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import "./Single.scss"
 
 type Props= {
-    id :string;
+    id :number;
     img ?:string;
     title:string;
     info:object;

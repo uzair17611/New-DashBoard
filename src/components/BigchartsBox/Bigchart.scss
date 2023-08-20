@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .Bigchart{
     display: flex;
     width: 100%;
@@ -6,8 +8,17 @@
     justify-content: space-between;
     // background-color:aquamarine;
 
+    h1{
+        @include xxl{
+            font-size: 24px;
+           }
+       }
+        
+    }
+
     .chart{
         width: 100%;
         height: 300px;
     }
-}
+
+

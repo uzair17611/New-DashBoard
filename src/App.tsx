@@ -17,7 +17,7 @@ import SingleUser from "./pages/SingleUser/SingleUser.tsx";
 
 
 function App() {
- 
+
   const Layout = () => {
     return (
       <div className="main">
@@ -27,7 +27,10 @@ function App() {
             <Menu />
           </div>
           <div className="contentContainer">
-         <Outlet />
+          
+          <Outlet />
+    
+
           </div>
         </div>
         <Footer />

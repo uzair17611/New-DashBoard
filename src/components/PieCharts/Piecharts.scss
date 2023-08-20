@@ -1,3 +1,6 @@
+@import "../../styles/responsive.scss";
+
+
 .piChartsBoc{
 
     width: 100%;
@@ -10,6 +13,10 @@
     h1{
         font-size: 20px;
         margin-bottom: -20px;
+        @include xxl{
+            font-size: 24px;
+           }
+       }
     }
 
     .options{
@@ -43,4 +50,3 @@
                  
         }
     }
-}

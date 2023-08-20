@@ -1,28 +1,31 @@
-import './Navbar.scss'
+import "./navbar.scss";
 
 const Navbar = () => {
   return (
-    <div className='Navbar'>
-  <div className="logo">
-  <img src="logo.svg" alt="" />
-  <span>UZAIR</span>
-  </div>
-  <div className="icon">
-    <img src="search.svg" alt="" />
-    <img src="expand.svg" alt="" />
-    <img src="app.svg" alt="" />
-  <div className='notification'>
-    <img src="/notifications.svg" alt="" />
-    <span>1</span>
+    <div className="navbar">
+      <div className="logo">
+        <img src="logo.svg" alt="" />
+        <span>lamadmin</span>
+      </div>
+      <div className="icons">
+        <img src="/search.svg" alt="" className="icon" />
+        <img src="/app.svg" alt="" className="icon" />
+        <img src="/expand.svg" alt="" className="icon" />
+        <div className="notification">
+          <img src="/notifications.svg" alt="" />
+          <span>1</span>
+        </div>
+        <div className="user">
+          <img
+            src="https://images.pexels.com/photos/11038549/pexels-photo-11038549.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+          <span>Jane</span>
+        </div>
+        <img src="/settings.svg" alt="" className="icon" />
+      </div>
     </div>
-    <div className="user">
-<img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg" alt="" />
-<span>Uzair</span>
-    </div>
-    <img  src='/settings.svg'></img>
-  </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

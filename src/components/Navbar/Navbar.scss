@@ -1,63 +1,59 @@
-.Navbar{
-    width: 100%;
-    padding:20px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+@import "../../styles/responsive.scss";
 
-.logo{
+.navbar {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
     display: flex;
     align-items: center;
     font-weight: bold;
-    gap:10px;
-}
-   .icon{
-
+    gap: 10px;
+  }
+  .icons {
     display: flex;
     align-items: center;
-    font-weight: bold;
-    gap:20px;
+    gap: 20px;
 
-
-    .notification{
-              position: relative;
-        span{
-            background-color: red;
-            width:20px;
-            height:20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            position: absolute;
-            top:-10px;
-            right:-10px;
-
-        }
-
+    .icon{
+      @include sm{
+        display: none;
+      }
     }
 
-    .user{
+    .notification {
+      position: relative;
 
+      span {
+        background-color: red;
+        color: white;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        right: -10px;
         display: flex;
         align-items: center;
-        gap:10px;
-   
-
-
-       
-
-        img{
-
-            width: 26px;
-            height: 26px;
-            border-radius: 20%;
-            object-fit: cover;
-        }
-        span{
-           
-        }
+        justify-content: center;
+        font-size: 12px;
+      }
     }
-   }
 
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
 }

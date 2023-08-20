@@ -1,7 +1,13 @@
+@import "../../styles/responsive.scss";
+
 .Top{
 
     h1{
         margin-bottom: 10px;
+
+        @include xxl{
+         font-size: 24px;
+        }
     }
 
     .list{
@@ -29,6 +35,18 @@
          .userEmail{
             font-weight: 500;
             font-size: 12px;
+            @include xxl{
+               display:none
+                }
+                @include lg{
+                 display:block
+                  }
+                  @include md{
+                     display:none
+                      }
+                      @include sm{
+                       display:none
+                        }
          }
             }
                     img{
@@ -36,6 +54,21 @@
                     height: 40px;
                     border-radius: 50%;
                     object-fit: cover;
+                    @include xxl{
+                   display:none
+                    }
+                    @include lg{
+                     display:none
+                      }
+                      @include md{
+                        display:none
+                         }
+                         @include sm{
+                          display:none
+                           }
+                          
+                }
+
                     }
                         
            .amount{
@@ -44,4 +77,3 @@
         }
      }
     }
-}

@@ -1,10 +1,31 @@
 @import "../../styles/variable.scss";
+@import "../../styles/responsive.scss";
+
 
 .home{
   display: grid;
   gap:10px;
   grid-template-columns: repeat(4 ,1fr);
   grid-auto-rows: minmax(180px , auto);
+
+  grid-auto-flow: dense;
+
+
+  @include xl {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(2,1fr);
+  }
+  @include lg {
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  @include sm {
+    grid-template-columns: minmax(180px,auto);
+  }
+ 
 
 
     .box {
@@ -28,7 +49,11 @@
     }
     .box7{
         grid-column: span 2;
-        grid-row :span 2
+        grid-row :span 2;
+
+        @include md {
+            display: none;
+          }
 
     }
     

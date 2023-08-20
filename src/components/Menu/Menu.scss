@@ -1,35 +1,40 @@
-@import "../../styles//variable.scss";
+@import "../../styles/variable.scss";
+@import "../../styles/responsive.scss";
 
+.menu {
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
 
-.Menu{
-  
+    .title {
+      font-size: 12px;
+      font-weight: 200;
+      color: $soft-color;
+      text-transform: uppercase;
 
-    .item{
-        display: flex;
-        flex-direction: column;
-        gap:10px;
-        margin-bottom: 20px;
+      @include lg{
+        display: none;
+      }
+    }
 
-        .listItem{
-            display: flex;
-            align-items: center;
-            gap:20px;
-            padding:10px;
-            border-radius: 5px;
-           &:hover{
-            background-color: $soft-bg;
-           
-            
-           }
+    .listItem {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $soft-bg;
+      }
+
+      .listItemTitle{
+        @include lg{
+          display: none;
         }
+      }
     }
-
-
-    .title{
-
-        font-weight: bold;
-        font-size:20px;
-        color: $soft-bg;
-    }
-    
+  }
 }
